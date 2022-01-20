@@ -34,7 +34,7 @@ jobs:
           test_token:projects/885475882644/secrets/test
           
     - name: Create env file
-        run:|
+      run: |
           touch .env
           echo '${{ steps.secrets.outputs.token }}' >> .env
 
