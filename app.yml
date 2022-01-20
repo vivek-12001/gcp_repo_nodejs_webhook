@@ -1,6 +1,6 @@
 # AppEngine config file
 runtime: nodejs10
-service: agero-webhook-cv-<environment>
+service: agero-webhook-cv
 
 includes:
 - .env
