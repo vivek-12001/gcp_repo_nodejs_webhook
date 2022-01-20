@@ -6,7 +6,7 @@ name: Deploy to AppEngine GCP
 on:
   # Triggers the workflow on push request events but only for the main branch
   push:
-    branches: [gcp_repo_nodejs_webhook]
+    branches: [app_engine_node]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
