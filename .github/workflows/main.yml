@@ -36,11 +36,14 @@ jobs:
     - name: Deploy to App Engine
       id: deploy
       uses: google-github-actions/deploy-appengine@v0.2.0
+      env:
+         TOKEN: '${{ steps.secrets.outputs.test_token }}'
       with:
         deliverables: app.yaml
         version: v1
         project_id: ${{ secrets.GCP_PROJECT }}
         credentials: ${{ secrets.GCP_CREDENTIALS }}
+        
 
     - name: Test
       run: curl "${{ steps.deploy.outputs.url }}"
