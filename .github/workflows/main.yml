@@ -27,16 +27,16 @@ jobs:
       with:
         credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-    - id: 'secrets'
-      uses: 'google-github-actions/get-secretmanager-secrets@v0'
-      with:
-        secrets: |-
-          test_token:projects/885475882644/secrets/test
+#     - id: 'secrets'
+#       uses: 'google-github-actions/get-secretmanager-secrets@v0'
+#       with:
+#         secrets: |-
+#           test_token:projects/885475882644/secrets/test
           
-    - name: Create env file
-      run: |
-          touch .env
-          echo '${{ steps.secrets.outputs.token }}' >> .env
+#     - name: Create env file
+#       run: |
+#           touch .env
+#           echo '${{ steps.secrets.outputs.token }}' >> .env
 
     - name: Deploy to App Engine
       id: deploy
