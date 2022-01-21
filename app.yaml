@@ -1,7 +1,5 @@
 runtime: nodejs10
 service: agero-webhook-cv
 
-includes:
-- .env
-
-
+# includes:
+# - .env
